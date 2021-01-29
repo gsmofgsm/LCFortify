@@ -8,7 +8,17 @@
 </head>
 <body>
     <div>
-        Nav goes here for guest layout
+        <ul>
+            <li>
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+
+                    <a href="{{ route('logout') }}" onclick="event.preventDefault();
+                        this.closest('form').submit();"
+                    >Logout</a>
+                </form>
+            </li>
+        </ul>
     </div>
 
     <div>
