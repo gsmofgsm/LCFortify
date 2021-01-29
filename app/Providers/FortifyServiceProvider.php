@@ -48,6 +48,10 @@ class FortifyServiceProvider extends ServiceProvider
             return view('auth.login');
         });
 
+        Fortify::verifyEmailView(function () {
+            return view('auth.verify-email');
+        });
+
 //        // customization used by jetstream
 //        Fortify::authenticateThrough(function (Request $request) {
 //            return array_filter([
