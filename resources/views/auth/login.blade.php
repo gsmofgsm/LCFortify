@@ -1,5 +1,5 @@
 <x-guest-layout>
-    <h2>Register</h2>
+    <h2>Login</h2>
 
     @if ($errors->any())
         <div>
@@ -13,13 +13,8 @@
         </div>
     @endif
 
-    <form action="/register" method="POST">
+    <form action="/login" method="POST">
         @csrf
-
-        <div>
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" value="{{ old('name') }}" autofocus>
-        </div>
 
         <div>
             <label for="email">Email</label>
@@ -32,12 +27,14 @@
         </div>
 
         <div>
-            <label for="password_confirmation">Password Confirmation</label>
-            <input type="password" id="password_confirmation" name="password_confirmation">
+            <label for="remember">
+                <input type="checkbox" id="remember" name="remember">
+                <span class="">Remember Me</span>
+            </label>
         </div>
 
         <div>
-            <button>Register</button>
+            <button>Login</button>
         </div>
     </form>
 </x-guest-layout>
