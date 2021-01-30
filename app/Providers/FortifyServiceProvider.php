@@ -64,6 +64,10 @@ class FortifyServiceProvider extends ServiceProvider
             return view('auth.confirm-password');
         });
 
+        Fortify::twoFactorChallengeView(function () {
+            return view('auth.two-factor-challenge');
+        });
+
 //        // customization used by jetstream
 //        Fortify::authenticateThrough(function (Request $request) {
 //            return array_filter([
