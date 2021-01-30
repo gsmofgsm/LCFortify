@@ -20,3 +20,7 @@ Route::get('/', function () {
 Route::middleware(['auth', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+Route::middleware(['auth', 'verified'])->get('/profile', function () {
+    return view('profile');
+})->name('profile');
