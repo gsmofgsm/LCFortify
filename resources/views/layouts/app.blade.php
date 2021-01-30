@@ -9,12 +9,9 @@
 <body>
     <div>
         <ul>
-            <li>
-                <a href="{{ route('profile') }}">Profile</a>
-            </li>
-            <li>
-                <a href="{{ route('password') }}">Update Password</a>
-            </li>
+            <li><a href="{{ route('dashboard') }}">Dashboard</a></li>
+            <li><a href="{{ route('profile') }}">Profile</a></li>
+            <li><a href="{{ route('password') }}">Update Password</a></li>
             <li>
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
